@@ -18,6 +18,22 @@ var myHeaders = new Headers();
 		.then(function(response) {
 		 console.log(response);
 		})
+OU:
+
+axios.defaults.baseURL = 'http://localhost:3001/cadastro';
+		axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+		axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+		axios.get(serviceUrl, onSuccess, onFailure)
+		
+		.then(resp => {
+			let d = (resp.data);
+			this.setState({registros: d})
+			//console.log(resp.data);
+			
+		})
+		.catch(error => {
+			console.log(error);
+		})
     
     
 ### `Parte a ser usada para enviar os dados:`
