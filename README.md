@@ -5,6 +5,8 @@ API em Node para se utilizar com react utilizando MongoDB
 
 ## Como usar:
 ### `Parte a ser usado para receber os dados:`
+ npm run dev
+
 var myHeaders = new Headers();
 		var myInit = { method: 'GET',
                headers: myHeaders,
