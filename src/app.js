@@ -24,6 +24,9 @@ const app = express();
 });*/
 app.use(function (req, res, next) {
   res.header("Content-Type",'application/json');
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "*");
   next();
 });
 app.use(bodyParser.urlencoded({
@@ -67,7 +70,7 @@ process.on('SIGINT', () => {
 
 // Load models
 const Mentions = require('./models/mentions');
-
+const Cadastro = require('./models/cadastro');
 
 // Load routes
 const indexRoutes = require('./routes/index-routes');
@@ -77,5 +80,7 @@ app.use('/', indexRoutes);
 const mentionsRoutes = require('./routes/mentions-routes');
 app.use('/mentions', mentionsRoutes);
 
+const cadastroRoutes = require('./routes/cadastro-routes');
+app.use('/cadastro', cadastroRoutes);
 
 module.exports = app;
