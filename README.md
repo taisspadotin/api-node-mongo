@@ -49,6 +49,6 @@ let enviar = {
 			console.log(response.json());
 		  });
 
-
+A api é utilizada em conjunto com o projeto exibicao.
 
 Passo a passo em: https://woliveiras.com.br/posts/construindo-uma-api-com-node-js-parte-1-criando-e-listando-dados/
